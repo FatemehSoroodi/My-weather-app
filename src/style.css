@@ -1,1 +1,44 @@
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
 
+h1 {
+  font-size: 50px;
+  margin-top: 40px;
+}
+
+h5 {
+  font-weight: lighter;
+}
+a {
+  text-decoration: none;
+}
+
+sup {
+  top: -0.3em;
+}
+footer {
+  font-size: smaller;
+  line-height: 0;
+}
+.weather-app {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  color: #fbfcfb;
+  background: linear-gradient(
+    109.6deg,
+    rgb(121, 203, 202) 11.2%,
+    rgb(119, 161, 211) 91.1%
+  );
+  border-radius: 10px;
+}
+.temperature {
+  font-size: 40px;
+  font-weight: 700px;
+}
+.units {
+  font-size: 25px;
+  font-weight: 700px;
+}

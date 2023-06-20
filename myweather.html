@@ -8,13 +8,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="weather-app">
         <div class="time">13:54</div>
-        <h3 class="date">Sunday, 29<sup>rd</sup> May</h3>
+        <h5 class="date">Sunday, 29<sup>rd</sup> May</h5>
         <h1 id="cityName">Qeshm, Iran</h1>
         <div>
           <span class="temperature" id="temperature"> 34 </span>
@@ -22,7 +24,7 @@
             <a href="#" id="celcius">°C</a>|<a href="#" id="fahrenhite">°F</a>
           </span>
         </div>
-        <h4>Clear</h4>
+        <h5>Clear</h5>
         <div class="weather-icon">
           <img
             src="images/Sun_Monochromatic (1).svg"
@@ -34,14 +36,14 @@
           <div class="col-6">Humidity: 58%</div>
           <div class="col-6">Wind speed: 2km/h</div>
         </div>
-        <small>
-          <a
-            href="https://github.com/FatemehSoroodi/Vanilla-weather-app/blob/main/weatherApp.html"
-            target="_blank"
-            >Open Source Code</a
-          >, by Fateme Soroodi
-        </small>
       </div>
+      <footer>
+        <a
+          href="https://github.com/FatemehSoroodi/Vanilla-weather-app/blob/main/weatherApp.html"
+          target="_blank"
+          >Open Source Code</a
+        >, by Fateme Soroodi
+      </footer>
     </div>
     <script src="src/app.js"></script>
   </body>
