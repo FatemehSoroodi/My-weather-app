@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>weather</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
@@ -15,16 +16,18 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <div class="time">13:54</div>
-        <h5 class="date">Sunday, 29<sup>rd</sup> May</h5>
-        <h1 id="cityName">Qeshm, Iran</h1>
+        <div id="local-date">
+          <div class="time" id="time">13:54</div>
+          <h5 class="date" id="date">Sunday, 29<sup>rd</sup> May</h5>
+        </div>
+        <h1 id="cityName">Qeshm</h1>
         <div>
           <span class="temperature" id="temperature"> 34 </span>
           <span class="units">
             <a href="#" id="celcius">°C</a>|<a href="#" id="fahrenhite">°F</a>
           </span>
         </div>
-        <h5>Clear</h5>
+        <h5 id="description">Clear</h5>
         <div class="weather-icon">
           <img
             src="images/Sun_Monochromatic (1).svg"
@@ -33,8 +36,8 @@
           />
         </div>
         <div class="row">
-          <div class="col-6">Humidity: 58%</div>
-          <div class="col-6">Wind speed: 2km/h</div>
+          <div class="col-6">Humidity: <span id="humidity">58</span>%</div>
+          <div class="col-6">Wind speed: <span id="wind">2</span>km/h</div>
         </div>
       </div>
       <footer>

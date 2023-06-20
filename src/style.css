@@ -10,6 +10,7 @@ h1 {
 
 h5 {
   font-weight: lighter;
+  text-transform: capitalize;
 }
 a {
   text-decoration: none;
