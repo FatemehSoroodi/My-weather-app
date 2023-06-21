@@ -39,7 +39,6 @@ function formarTime(timestamp) {
 }
 
 function desplayTemperature(response) {
-  console.log(response);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#cityName");
   let descriptionElement = document.querySelector("#description");
