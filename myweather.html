@@ -27,12 +27,31 @@
         </div>
         <h5 id="description">Clear</h5>
         <div class="weather-icon">
-          <img src="" alt="clear" id="icon" width="200px" />
+          <img src="" alt="clear" id="icon" />
         </div>
         <div class="row">
           <div class="col-6">Humidity: <span id="humidity">58</span>%</div>
           <div class="col-6">Wind speed: <span id="wind">2</span>km/h</div>
         </div>
+        <form id="search-form" class="mb-3">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                class="form-control"
+                id="search-input"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-primary w-100"
+              />
+            </div>
+          </div>
+        </form>
       </div>
       <footer>
         <a

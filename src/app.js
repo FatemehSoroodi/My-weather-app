@@ -61,7 +61,16 @@ function desplayTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.condition.description);
 }
+function search(city) {
+  let apiKey = "241b37tabc824f548d9of2bb0bbe3ed0";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(desplayTemperature);
+}
+function hanelSubmit(event) {
+  event.preventDefault();
+  let cityElement = document.querySelector("#search-input");
+  search(cityElement.value);
+}
 
-let apiKey = "241b37tabc824f548d9of2bb0bbe3ed0";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query={Istanbul}&key=${apiKey}&units=metric`;
-axios.get(apiUrl).then(desplayTemperature);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", hanelSubmit);
