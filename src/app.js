@@ -47,6 +47,7 @@ function desplayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let timeElement = document.querySelector("#time");
   let iconElement = document.querySelector("#icon");
+  celciusTemperature = response.data.temperature.current;
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
@@ -70,6 +71,25 @@ function hanelSubmit(event) {
   let cityElement = document.querySelector("#search-input");
   search(cityElement.value);
 }
+function showFahrenhiteTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenhiteTemperature = (celciusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenhiteTemperature);
+}
+function showCelciusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+let celciusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", hanelSubmit);
+
+let fahrenhiteLink = document.querySelector("#fahrenhite-link");
+fahrenhiteLink.addEventListener("click", showFahrenhiteTemperature);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", showCelciusTemperature);
+search("Qeshm");
