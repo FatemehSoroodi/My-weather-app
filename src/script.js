@@ -92,4 +92,5 @@ fahrenhiteLink.addEventListener("click", showFahrenhiteTemperature);
 
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelciusTemperature);
+
 search("Qeshm");

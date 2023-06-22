@@ -13,9 +13,6 @@ h5 {
   text-transform: capitalize;
   font-size: 16px;
 }
-ul {
-  list-style-type: none;
-}
 a {
   text-decoration: none;
 }
@@ -48,4 +45,16 @@ footer {
   font-weight: 700px;
   position: relative;
   margin-left: -3px;
+}
+.search {
+  color: #ffff;
+  font-weight: bolder;
+  background-color: #fac70b;
+  border-color: darkgray;
+  transition: all 200ms ease-in-out;
+}
+.search:hover {
+  color: white;
+  border-color: transparent;
+  background-color: #f9a01b;
 }
