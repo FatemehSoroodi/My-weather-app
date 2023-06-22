@@ -24,6 +24,9 @@ footer {
   font-size: smaller;
   line-height: 0;
 }
+sup {
+  top: -0.3em;
+}
 .weather-app {
   max-width: 600px;
   margin: 20px auto;
@@ -43,18 +46,17 @@ footer {
 .units {
   font-size: 20px;
   font-weight: 700px;
-  position: relative;
-  margin-left: -3px;
 }
+
 .search {
   color: #ffff;
   font-weight: bolder;
-  background-color: #fac70b;
+  background-color: #f9a01b;
   border-color: darkgray;
   transition: all 200ms ease-in-out;
 }
 .search:hover {
   color: white;
   border-color: transparent;
-  background-color: #f9a01b;
+  background-color: #fac70b;
 }
