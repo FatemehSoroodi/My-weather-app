@@ -16,13 +16,13 @@
   <body>
     <div class="container">
       <div class="weather-app">
+        <h5 class="date" id="date">Sunday, 29 May</h5>
         <div class="time" id="time">13:54</div>
-        <h5 class="date" id="date">Sunday, 29<sup>rd</sup> May</h5>
         <h1 id="cityName">Qeshm</h1>
         <div>
-          <span class="temperature" id="temperature"> 34 </span>
-          <span class="units">
-            <a href="#" id="celcius-link">°C</a>|<a
+          <span class="temperature" id="temperature">34</span>
+          <span class="units"
+            ><a href="#" id="celcius-link">°C</a>|<a
               href="#"
               id="fahrenhite-link"
               >°F</a
@@ -39,7 +39,8 @@
         </div>
         <form id="search-form" class="mb-3">
           <div class="row">
-            <div class="col-9">
+            <div class="col-2"></div>
+            <div class="col-6">
               <input
                 type="search"
                 placeholder="Type a city.."
@@ -47,13 +48,14 @@
                 id="search-input"
               />
             </div>
-            <div class="col-3">
+            <div class="col-2">
               <input
                 type="submit"
                 value="Search"
                 class="btn btn-primary w-100"
               />
             </div>
+            <div class="col-2"></div>
           </div>
         </form>
       </div>

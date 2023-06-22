@@ -11,6 +11,10 @@ h1 {
 h5 {
   font-weight: lighter;
   text-transform: capitalize;
+  font-size: 16px;
+}
+ul {
+  list-style-type: none;
 }
 a {
   text-decoration: none;
@@ -40,6 +44,8 @@ footer {
   font-weight: 700px;
 }
 .units {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700px;
+  position: relative;
+  margin-left: -3px;
 }
