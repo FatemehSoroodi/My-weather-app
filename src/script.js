@@ -73,12 +73,16 @@ function hanelSubmit(event) {
 }
 function showFahrenhiteTemperature(event) {
   event.preventDefault();
+  fahrenhiteLink.classList.add("active");
+  celciusLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   let fahrenhiteTemperature = (celciusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenhiteTemperature);
 }
 function showCelciusTemperature(event) {
   event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenhiteLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }

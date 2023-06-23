@@ -47,6 +47,10 @@ sup {
   font-size: 20px;
   font-weight: 700px;
 }
+.units .active {
+  color: #ffff;
+  cursor: default;
+}
 
 .search {
   color: #ffff;
