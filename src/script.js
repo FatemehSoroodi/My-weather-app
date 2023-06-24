@@ -37,6 +37,34 @@ function formarTime(timestamp) {
   }
   return `${hour}:${minute}`;
 }
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thr"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+                alt="sunny"
+                width="40px"
+              />
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">38°</span>
+                <span class="weather-forecast-temperature-min">36°</span>
+              </div>
+              </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+function getForecast(coordinates) {
+  let apiKey = "241b37tabc824f548d9of2bb0bbe3ed0";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function desplayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -60,6 +88,8 @@ function desplayTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
+
+  getForecast(response.data.coordinates);
 }
 function search(city) {
   let apiKey = "241b37tabc824f548d9of2bb0bbe3ed0";
@@ -87,30 +117,6 @@ function showCelciusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thr"];
-  let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2">
-              <div class="weather-forecast-date">${day}</div>
-              <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-                alt="sunny"
-                width="40px"
-              />
-              <div class="weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">38°</span>
-                <span class="weather-forecast-temperature-min">36°</span>
-              </div>
-              </div>`;
-  });
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
-
 let celciusTemperature = null;
 
 let form = document.querySelector("#search-form");
@@ -123,4 +129,3 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelciusTemperature);
 
 search("Qeshm");
-displayForecast();
