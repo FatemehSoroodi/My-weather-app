@@ -86,6 +86,31 @@ function showCelciusTemperature(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thr"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+                alt="sunny"
+                width="40px"
+              />
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">38°</span>
+                <span class="weather-forecast-temperature-min">36°</span>
+              </div>
+              </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let celciusTemperature = null;
 
 let form = document.querySelector("#search-form");
@@ -98,3 +123,4 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelciusTemperature);
 
 search("Qeshm");
+displayForecast();
