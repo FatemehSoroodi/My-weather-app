@@ -31,6 +31,7 @@ sup {
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
+  padding-bottom: 10px;
   color: #fbfcfb;
   background: linear-gradient(
     109.6deg,
@@ -52,7 +53,7 @@ sup {
   cursor: default;
 }
 .weather-forecast {
-  margin-top: 15px;
+  margin-top: 13px;
   text-align: center;
   font-size: 12px;
   font-style: italic;
