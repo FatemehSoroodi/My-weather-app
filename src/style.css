@@ -53,14 +53,14 @@ sup {
 }
 .weather-forecast {
   margin-top: 15px;
-
   text-align: center;
-  font-size: 17px;
+  font-size: 12px;
+  font-style: italic;
   color: #575151;
 }
 .weather-forecast-temperature {
   font-size: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .weather-forecast-temperature-min {
   opacity: 0.8;
