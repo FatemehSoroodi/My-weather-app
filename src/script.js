@@ -121,31 +121,8 @@ function hanelSubmit(event) {
   let cityElement = document.querySelector("#search-input");
   search(cityElement.value);
 }
-function showFahrenhiteTemperature(event) {
-  event.preventDefault();
-  fahrenhiteLink.classList.add("active");
-  celciusLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  let fahrenhiteTemperature = (celciusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenhiteTemperature);
-}
-function showCelciusTemperature(event) {
-  event.preventDefault();
-  celciusLink.classList.add("active");
-  fahrenhiteLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-}
-
-let celciusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", hanelSubmit);
-
-let fahrenhiteLink = document.querySelector("#fahrenhite-link");
-fahrenhiteLink.addEventListener("click", showFahrenhiteTemperature);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", showCelciusTemperature);
 
 search("Qeshm");
